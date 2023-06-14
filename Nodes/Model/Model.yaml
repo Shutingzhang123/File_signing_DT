@@ -1,0 +1,77 @@
+Name: Model
+Type: ModelCategoryFolder
+Children:
+- Name: Variable1
+  Id: g=ec018efb733e28c767e8a5c4ff3b59ef
+  Type: BaseDataVariableType
+  DataType: Int32
+  Value: 0
+  Children:
+  - Name: AuditSigning Signature
+    Type: AuditInfo
+    ReferenceType: NonHierarchicalOwning
+    Children:
+    - Name: Users
+      Type: BaseObjectType
+    - Name: Groups
+      Type: BaseObjectType
+- Name: PDF_path
+  Id: g=4213d637b7474779d4243fe6a4f18e6c
+  Type: BaseDataVariableType
+  DataType: ResourceUri
+  Value: "0"
+- Name: Public_key_path
+  Id: g=7ecd3f9f0471ee49501b0259b7f85977
+  Type: BaseDataVariableType
+  DataType: ResourceUri
+  Value: "0"
+- Name: Private_key_path
+  Id: g=0795378ce621acbbcc0489a408221c27
+  Type: BaseDataVariableType
+  DataType: ResourceUri
+  Value: "0"
+- Name: Signed_file_path
+  Id: g=3279d716f669976e0ca9a3f8ef57cf6f
+  Type: BaseDataVariableType
+  DataType: ResourceUri
+  Value: "0"
+- Name: Signature_file_path
+  Id: g=c7f5eb1a687f5b581f249904b008eb75
+  Type: BaseDataVariableType
+  DataType: ResourceUri
+  Value: "0"
+- Name: CSV_path
+  Id: g=cbb15745fb262224eb9b701f110a79c3
+  Type: BaseDataVariableType
+  DataType: AbsoluteResourceUri
+  Value: "0"
+- Name: Signed_file1_path
+  Id: g=6826bdefce0d7930347e95bf6f9ffb4b
+  Type: BaseDataVariableType
+  DataType: ResourceUri
+  Value: "0"
+- Name: Signed_file2_path
+  Id: g=98c40046ad1d027db0c08f336db30773
+  Type: BaseDataVariableType
+  DataType: ResourceUri
+  Value: "0"
+- Name: Signed_file3_path
+  Id: g=4207ddb710a56b395666523395c5afc6
+  Type: BaseDataVariableType
+  DataType: ResourceUri
+  Value: "0"
+- Name: Signature_file1_path
+  Id: g=5c07646c59a65fedf5e902a72e7a4344
+  Type: BaseDataVariableType
+  DataType: ResourceUri
+  Value: "0"
+- Name: Signature_file2_path
+  Id: g=b7b283536042cc2dc668a42c98807944
+  Type: BaseDataVariableType
+  DataType: ResourceUri
+  Value: "0"
+- Name: Signature_file3_path
+  Id: g=01029382e2de9f54798cb21b539e860d
+  Type: BaseDataVariableType
+  DataType: ResourceUri
+  Value: "0"

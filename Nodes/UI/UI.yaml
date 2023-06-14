@@ -1,0 +1,2919 @@
+Name: UI
+Type: UICategoryFolder
+Children:
+- Name: DefaultStyleSheet
+  Id: g=fa5d392bc6d5694ebf5c48aa9916dbb2
+  Type: StyleSheet
+  Children:
+  - Name: ButtonStyle
+    Type: ButtonStyle
+  - Name: ButtonAccentStyle
+    Type: ButtonStyle
+  - Name: DataInputStyle
+    Type: DataInputStyle
+  - Name: SwitchStyle
+    Type: SwitchStyle
+  - Name: GaugeStyle
+    Type: GaugeStyle
+  - Name: NavigationPanelStyle
+    Type: NavigationPanelStyle
+    Children:
+    - Name: IconUsesTextColor
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+  - Name: ChartStyle
+    Type: ChartStyle
+  - Name: DataListStyle
+    Type: DataListStyle
+  - Name: ToolTipStyle
+    Type: ToolTipStyle
+  - Name: ScrollBarStyle
+    Type: ScrollBarStyle
+  - Name: AccordionStyle
+    Type: AccordionStyle
+  - Name: PieChartStyle
+    Type: PieChartStyle
+  - Name: HistogramChartStyle
+    Type: HistogramChartStyle
+- Name: NativePresentationEngine
+  Type: NativePresentationEngine
+  ReferenceType: HasOrderedComponent
+  Children:
+  - Name: EnableVirtualKeyboard
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: StartWindow
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"b1f6c8b230e87572ef0281ef02947772","Namespace":7}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"Id":12,"Namespace":3}
+  - Name: StyleSheet
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"fa5d392bc6d5694ebf5c48aa9916dbb2","Namespace":7}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"Id":447,"Namespace":3}
+  - Name: StartingUser
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"Id":46,"Namespace":1}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"Id":14,"Namespace":1}
+  - Name: Sessions
+    Type: BaseObjectType
+- Name: MainWindow
+  Id: g=b1f6c8b230e87572ef0281ef02947772
+  Supertype: Window
+  Children:
+  - Name: Width
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 1280.0
+  - Name: Height
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 820.0
+  - Name: SpinBox1
+    Type: SpinBox
+    Children:
+    - Name: Value
+      Type: BaseDataVariableType
+      DataType: Double
+      Value: 0.0
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "{NodeId:ns=7;g=ec018efb-733e-28c7-67e8-a5c4ff3b59ef}"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 80.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 5.0
+  - Name: DataGrid1
+    Type: DataGrid
+    Children:
+    - Name: Model
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":2,"Id":"bf50cb53e937c7f7d6f4b703814dbe09","Namespace":7}
+      Children:
+      - Name: ItemKind
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+    - Name: Query
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "SELECT * FROM \"SigningEventLogger\""
+    - Name: Columns
+      Type: BaseObjectType
+      Children:
+      - Name: ActionTimeStamp
+        Type: DataGridColumn
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"ActionTimeStamp"}
+        - Name: Width
+          Type: BaseDataVariableType
+          DataType: Size
+          Value: -1.0
+        - Name: HeaderAlignment
+          Type: BaseDataVariableType
+          DataType: TextHorizontalAlignment
+          Value: 0
+        - Name: ContentAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          Value: 0
+        - Name: OrderBy
+          Type: BaseDataVariableType
+          DataType: NodePath
+          Value: "{Item}/ActionTimeStamp"
+        - Name: DataItemTemplate
+          Type: DataGridLabelItemTemplate
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"LocaleId":"en-US","Text":""}
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Item}/ActionTimeStamp"
+      - Name: SourceName
+        Type: DataGridColumn
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"SourceName"}
+        - Name: Width
+          Type: BaseDataVariableType
+          DataType: Size
+          Value: -1.0
+        - Name: HeaderAlignment
+          Type: BaseDataVariableType
+          DataType: TextHorizontalAlignment
+          Value: 0
+        - Name: ContentAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          Value: 0
+        - Name: OrderBy
+          Type: BaseDataVariableType
+          DataType: NodePath
+          Value: "{Item}/SourceName"
+        - Name: DataItemTemplate
+          Type: DataGridLabelItemTemplate
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"LocaleId":"en-US","Text":""}
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Item}/SourceName"
+      - Name: OldValue
+        Type: DataGridColumn
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"OldValue"}
+        - Name: Width
+          Type: BaseDataVariableType
+          DataType: Size
+          Value: -1.0
+        - Name: HeaderAlignment
+          Type: BaseDataVariableType
+          DataType: TextHorizontalAlignment
+          Value: 0
+        - Name: ContentAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          Value: 0
+        - Name: OrderBy
+          Type: BaseDataVariableType
+          DataType: NodePath
+          Value: "{Item}/OldValue"
+        - Name: DataItemTemplate
+          Type: DataGridLabelItemTemplate
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Item}/OldValue"
+      - Name: NewValue
+        Type: DataGridColumn
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"NewValue"}
+        - Name: Width
+          Type: BaseDataVariableType
+          DataType: Size
+          Value: -1.0
+        - Name: HeaderAlignment
+          Type: BaseDataVariableType
+          DataType: TextHorizontalAlignment
+          Value: 0
+        - Name: ContentAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          Value: 0
+        - Name: OrderBy
+          Type: BaseDataVariableType
+          DataType: NodePath
+          Value: "{Item}/NewValue"
+        - Name: DataItemTemplate
+          Type: DataGridLabelItemTemplate
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Item}/NewValue"
+      - Name: WorkflowType
+        Type: DataGridColumn
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"WorkflowType"}
+        - Name: Width
+          Type: BaseDataVariableType
+          DataType: Size
+          Value: -1.0
+        - Name: HeaderAlignment
+          Type: BaseDataVariableType
+          DataType: TextHorizontalAlignment
+          Value: 0
+        - Name: ContentAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          Value: 0
+        - Name: OrderBy
+          Type: BaseDataVariableType
+          DataType: NodePath
+          Value: "{Item}/WorkflowType"
+        - Name: DataItemTemplate
+          Type: DataGridLabelItemTemplate
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            Children:
+            - Name: KeyValueConverter1
+              Type: ValueMapConverter
+              Children:
+              - Name: Source
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Item}/WorkflowType"
+              - Name: Pairs
+                Type: BaseObjectType
+                ModellingRule: None
+                Children:
+                - Name: Pair
+                  Type: ValueMapPair
+                  ModellingRule: None
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ModellingRule: None
+                    Value: "0"
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ModellingRule: None
+                    Value: "Confirm"
+                - Name: Pair1
+                  Type: ValueMapPair
+                  ModellingRule: None
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ModellingRule: None
+                    Value: "1"
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ModellingRule: None
+                    Value: "Sign"
+                - Name: Pair2
+                  Type: ValueMapPair
+                  ModellingRule: None
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ModellingRule: None
+                    Value: "2"
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ModellingRule: None
+                    Value: "Double Sign"
+                - Name: Pair3
+                  Type: ValueMapPair
+                  ModellingRule: None
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ModellingRule: None
+                    Value: "3"
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ModellingRule: None
+                    Value: "Default"
+      - Name: SignResult
+        Type: DataGridColumn
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"SignResult"}
+        - Name: Width
+          Type: BaseDataVariableType
+          DataType: Size
+          Value: -1.0
+        - Name: HeaderAlignment
+          Type: BaseDataVariableType
+          DataType: TextHorizontalAlignment
+          Value: 0
+        - Name: ContentAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          Value: 0
+        - Name: OrderBy
+          Type: BaseDataVariableType
+          DataType: NodePath
+          Value: "{Item}/SignResult"
+        - Name: DataItemTemplate
+          Type: DataGridLabelItemTemplate
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            Children:
+            - Name: KeyValueConverter1
+              Type: ValueMapConverter
+              Children:
+              - Name: Source
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Item}/SignResult"
+              - Name: Pairs
+                Type: BaseObjectType
+                ModellingRule: None
+                Children:
+                - Name: Pair
+                  Type: ValueMapPair
+                  ModellingRule: None
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ModellingRule: None
+                    Value: "0"
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ModellingRule: None
+                    Value: "Succeeded"
+                - Name: Pair1
+                  Type: ValueMapPair
+                  ModellingRule: None
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ModellingRule: None
+                    Value: "1"
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ModellingRule: None
+                    Value: "Canceled"
+                - Name: Pair2
+                  Type: ValueMapPair
+                  ModellingRule: None
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ModellingRule: None
+                    Value: "2"
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ModellingRule: None
+                    Value: "First user login failed"
+                - Name: Pair3
+                  Type: ValueMapPair
+                  ModellingRule: None
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ModellingRule: None
+                    Value: "3"
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ModellingRule: None
+                    Value: "Second user login failed"
+                - Name: Pair4
+                  Type: ValueMapPair
+                  ModellingRule: None
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ModellingRule: None
+                    Value: "4"
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ModellingRule: None
+                    Value: "First user not authorized"
+                - Name: Pair5
+                  Type: ValueMapPair
+                  ModellingRule: None
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ModellingRule: None
+                    Value: "5"
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ModellingRule: None
+                    Value: "Second user not authorized"
+      - Name: ClientUserId
+        Type: DataGridColumn
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"ClientUserId"}
+        - Name: Width
+          Type: BaseDataVariableType
+          DataType: Size
+          Value: -1.0
+        - Name: HeaderAlignment
+          Type: BaseDataVariableType
+          DataType: TextHorizontalAlignment
+          Value: 0
+        - Name: ContentAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          Value: 0
+        - Name: OrderBy
+          Type: BaseDataVariableType
+          DataType: NodePath
+          Value: "{Item}/ClientUserId"
+        - Name: DataItemTemplate
+          Type: DataGridLabelItemTemplate
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Item}/ClientUserId"
+      - Name: ClientUserNote
+        Type: DataGridColumn
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"ClientUserNote"}
+        - Name: Width
+          Type: BaseDataVariableType
+          DataType: Size
+          Value: -1.0
+        - Name: HeaderAlignment
+          Type: BaseDataVariableType
+          DataType: TextHorizontalAlignment
+          Value: 0
+        - Name: ContentAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          Value: 0
+        - Name: OrderBy
+          Type: BaseDataVariableType
+          DataType: NodePath
+          Value: "{Item}/ClientUserNote"
+        - Name: DataItemTemplate
+          Type: DataGridLabelItemTemplate
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Item}/ClientUserNote"
+      - Name: SecondClientUserNote
+        Type: DataGridColumn
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"SecondClientUserNote"}
+        - Name: Width
+          Type: BaseDataVariableType
+          DataType: Size
+          Value: -1.0
+        - Name: HeaderAlignment
+          Type: BaseDataVariableType
+          DataType: TextHorizontalAlignment
+          Value: 0
+        - Name: ContentAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          Value: 0
+        - Name: OrderBy
+          Type: BaseDataVariableType
+          DataType: NodePath
+          Value: "{Item}/SecondClientUserNote"
+        - Name: DataItemTemplate
+          Type: DataGridLabelItemTemplate
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Item}/SecondClientUserNote"
+    - Name: SelectedItem
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+    - Name: UISelectedItem
+      Type: BaseDataVariableType
+      DataType: NodeId
+      AccessLevel: Read
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
+    - Class: Reference
+      Target: ns=3;i=504
+      Direction: Forward
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1260.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 560.0
+    - Name: Item
+      Type: Alias
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 255.0
+    - Name: AutoRefreshTime
+      Type: BaseDataVariableType
+      DataType: Duration
+      ModellingRule: Optional
+      Value: "0:00:00:5.0000000"
+  - Name: Generate_PDF_Button
+    Type: Button
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Generate PDF"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 360.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: MouseClickEventHandler1
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"Id":16,"Namespace":3}
+      - Name: MethodsToCall
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"8e1e9c118685f51534ce32e45bd94696","Namespace":7}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"Id":58}
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "GeneratePdf"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: OutputPath
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              Description: {"NamespaceIndex":24,"TextId":"GeneratePdfOutputPathDescription"}
+              Value: ""
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{NodeId:ns=7;g=4213d637-b747-4779-d424-3fe6a4f18e6c}"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: LocaleId
+              Type: BaseDataVariableType
+              DataType: String
+              Description: {"NamespaceIndex":24,"TextId":"GeneratePdfLocaleIdDescription"}
+              Value: "en-US"
+          - Name: OutputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: OperationId
+              Type: BaseDataVariableType
+              DataType: Guid
+              Description: {"NamespaceIndex":24,"TextId":"GeneratePdfOperationIdDescription"}
+              Value: "00000000000000000000000000000000"
+      - Name: EventArguments
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Type: PropertyType
+          DataType: ByteString
+          Value: ""
+        - Name: EventType
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: SourceNode
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: SourceName
+          Type: PropertyType
+          DataType: String
+          Value: ""
+        - Name: Time
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: ReceiveTime
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: Message
+          Type: PropertyType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: Severity
+          Type: PropertyType
+          DataType: UInt16
+          Value: 0
+  - Name: Public_key_path
+    Type: TextBox
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "{NodeId:ns=7;g=7ecd3f9f-0471-ee49-501b-0259b7f85977}"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 190.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 100.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+  - Name: PDF_path
+    Type: TextBox
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "{NodeId:ns=7;g=4213d637-b747-4779-d424-3fe6a4f18e6c}"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 220.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 360.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 15.0
+  - Name: Private_key_path
+    Type: TextBox
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "{NodeId:ns=7;g=0795378c-e621-acbb-cc04-89a408221c27}"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 190.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 100.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 85.0
+  - Name: Label1
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Public key path"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 9.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 55.0
+  - Name: Label2
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Private key path"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 90.0
+  - Name: Label3
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"PDF path"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 298.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 25.0
+  - Name: Generate_Key_Button
+    Type: Button
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Generate keys"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 100.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 145.0
+    - Name: MouseClickEventHandler1
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"Id":16,"Namespace":3}
+      - Name: MethodsToCall
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"1ac7643abc3252197bfd3f2dcab1d704","Namespace":7}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"Id":58}
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "GeneratePublicAndPrivateKey"
+      - Name: EventArguments
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Type: PropertyType
+          DataType: ByteString
+          Value: ""
+        - Name: EventType
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: SourceNode
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: SourceName
+          Type: PropertyType
+          DataType: String
+          Value: ""
+        - Name: Time
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: ReceiveTime
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: Message
+          Type: PropertyType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: Severity
+          Type: PropertyType
+          DataType: UInt16
+          Value: 0
+  - Name: Sign_file_Button
+    Type: Button
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Sign file"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 690.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 40.0
+    - Name: MouseClickEventHandler1
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"Id":16,"Namespace":3}
+      - Name: MethodsToCall
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"1ac7643abc3252197bfd3f2dcab1d704","Namespace":7}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"Id":58}
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "SignFile"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: filePath
+              Type: BaseDataVariableType
+              DataType: String
+              Value: ""
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{NodeId:ns=7;g=3279d716-f669-976e-0ca9-a3f8ef57cf6f}"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+      - Name: EventArguments
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Type: PropertyType
+          DataType: ByteString
+          Value: ""
+        - Name: EventType
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: SourceNode
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: SourceName
+          Type: PropertyType
+          DataType: String
+          Value: ""
+        - Name: Time
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: ReceiveTime
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: Message
+          Type: PropertyType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: Severity
+          Type: PropertyType
+          DataType: UInt16
+          Value: 0
+  - Name: Signed_file_path
+    Type: TextBox
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "{NodeId:ns=7;g=3279d716-f669-976e-0ca9-a3f8ef57cf6f}"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 190.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 690.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+  - Name: Label4
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Signed file path"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 600.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 15.0
+    - Name: Visible
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+  - Name: Verify_file_button
+    Type: Button
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Verify file"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 900.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 30.0
+    - Name: MouseClickEventHandler1
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"Id":16,"Namespace":3}
+      - Name: MethodsToCall
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"1ac7643abc3252197bfd3f2dcab1d704","Namespace":7}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"Id":58}
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "VerifyFileSignature"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: filePath
+              Type: BaseDataVariableType
+              DataType: String
+              Value: ""
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{NodeId:ns=7;g=3279d716-f669-976e-0ca9-a3f8ef57cf6f}"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: signatureFilePath
+              Type: BaseDataVariableType
+              DataType: String
+              Value: ""
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{NodeId:ns=7;g=c7f5eb1a-687f-5b58-1f24-9904b008eb75}"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+          - Name: OutputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: verifyResult
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: false
+        - Name: MethodContainer2
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"Id":22,"Namespace":2}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"Id":58}
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Set"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: VariableToModify
+              Type: BaseDataVariableType
+              DataType: VariablePointer
+              Description: {"NamespaceIndex":2,"TextId":"SetVariableToModifyDescription"}
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../file_visible_label/Visible@NodeId"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Description: {"NamespaceIndex":2,"TextId":"SetValueDescription"}
+              Value: true
+            - Name: ArrayIndex
+              Type: BaseDataVariableType
+              DataType: UInt32
+              Description: {"NamespaceIndex":2,"TextId":"SetArrayIndexDescription"}
+              ValueRank: ScalarOrOneDimension
+              Value: 0
+      - Name: EventArguments
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Type: PropertyType
+          DataType: ByteString
+          Value: ""
+        - Name: EventType
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: SourceNode
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: SourceName
+          Type: PropertyType
+          DataType: String
+          Value: ""
+        - Name: Time
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: ReceiveTime
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: Message
+          Type: PropertyType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: Severity
+          Type: PropertyType
+          DataType: UInt16
+          Value: 0
+  - Name: Signature_file_path
+    Type: TextBox
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "{NodeId:ns=7;g=c7f5eb1a-687f-5b58-1f24-9904b008eb75}"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 220.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1010.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+  - Name: Label5
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Signature file path"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 900.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+  - Name: file_visible_label
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: KeyValueConverter1
+        Type: ValueMapConverter
+        Children:
+        - Name: Source
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Verify_file_button/MouseClickEventHandler1/MethodsToCall/MethodContainer1/OutputArguments/verifyResult"
+        - Name: Pairs
+          Type: BaseObjectType
+          Children:
+          - Name: Pair
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: true
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Value: {"LocaleId":"en-US","Text":"The signature is valid"}
+              Children:
+              - Name: StringFormatter1
+                Type: StringFormatter
+                Children:
+                - Name: Format
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ReferenceType: HasParameter
+                  ModellingRule: Optional
+                  Value: {"LocaleId":"en-US","Text":"The signature of file {0} is valid"}
+                - Name: ns=2;Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{NodeId:ns=7;g=3279d716-f669-976e-0ca9-a3f8ef57cf6f}"
+                    Children:
+                    - Name: Mode
+                      Type: BaseVariableType
+                      DataType: DynamicLinkMode
+                      ModellingRule: Optional
+                      Value: 2
+                - Name: Mode
+                  Type: PropertyType
+                  DataType: DynamicLinkMode
+                  ReferenceType: HasComponent
+                  ModellingRule: Optional
+                  Value: 2
+          - Name: Pair1
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: false
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Value: {"LocaleId":"en-US","Text":"Signature error"}
+              Children:
+              - Name: StringFormatter1
+                Type: StringFormatter
+                Children:
+                - Name: Format
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ReferenceType: HasParameter
+                  ModellingRule: Optional
+                  Value: {"LocaleId":"en-US","Text":"Signature error for file {0}"}
+                - Name: ns=2;Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{NodeId:ns=7;g=3279d716-f669-976e-0ca9-a3f8ef57cf6f}"
+                    Children:
+                    - Name: Mode
+                      Type: BaseVariableType
+                      DataType: DynamicLinkMode
+                      ModellingRule: Optional
+                      Value: 2
+                - Name: Mode
+                  Type: PropertyType
+                  DataType: DynamicLinkMode
+                  ReferenceType: HasComponent
+                  ModellingRule: Optional
+                  Value: 2
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 900.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 60.0
+    - Name: Visible
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: false
+    - Name: TextColor
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#e43232"
+    - Name: VisibleTransitioned
+      Type: VariableTransitionEventDispatcher
+      Children:
+      - Name: Value
+        Type: BaseVariableType
+        DataType: Double
+        Value: 1.0
+      - Name: Transition
+        Type: BaseVariableType
+        DataType: VariableTransition
+        Value: 0
+      - Name: VariableNodePath
+        Type: BaseVariableType
+        DataType: NodePath
+        Value: "../Visible"
+      - Name: VariableTransitionEventHandler1
+        Type: EventHandler
+        Children:
+        - Name: ListenEventType
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"Id":108,"Namespace":2}
+        - Name: MethodsToCall
+          Type: BaseObjectType
+          Children:
+          - Name: MethodContainer1
+            Type: BaseObjectType
+            Children:
+            - Name: ns=2;ObjectPointer
+              Type: NodePointer
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+              Children:
+              - Name: Kind
+                Type: PropertyType
+                DataType: NodeId
+                Value: {"Id":58}
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../HideLabelNetLogic@NodeId"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: ns=2;Method
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Hide"
+        - Name: EventArguments
+          Type: VariableTransitionEvent
+          Children:
+          - Name: VariableNodeId
+            Type: BaseVariableType
+            DataType: NodeId
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
+          - Name: NewValue
+            Type: BaseVariableType
+            DataType: BaseDataType
+          - Name: OldValue
+            Type: BaseVariableType
+            DataType: BaseDataType
+          - Name: EventId
+            Type: PropertyType
+            DataType: ByteString
+            Value: ""
+          - Name: EventType
+            Type: PropertyType
+            DataType: NodeId
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
+          - Name: SourceNode
+            Type: PropertyType
+            DataType: NodeId
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
+          - Name: SourceName
+            Type: PropertyType
+            DataType: String
+            Value: ""
+          - Name: Time
+            Type: PropertyType
+            DataType: UtcTime
+            Value: "1601-01-01T00:00:00.0000000"
+          - Name: ReceiveTime
+            Type: PropertyType
+            DataType: UtcTime
+            Value: "1601-01-01T00:00:00.0000000"
+          - Name: Message
+            Type: PropertyType
+            DataType: LocalizedText
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          - Name: Severity
+            Type: PropertyType
+            DataType: UInt16
+            Value: 0
+    - Name: HideLabelNetLogic
+      Type: NetLogic
+      Children:
+      - Class: Method
+        Name: Hide
+  - Name: Export_CSV_Button
+    Type: Button
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Export to CSV"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 360.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 130.0
+    - Name: MouseClickEventHandler1
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"Id":16,"Namespace":3}
+      - Name: MethodsToCall
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"ea6b3c93b516b5d886dd822161fb1a99","Namespace":7}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"Id":58}
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Export"
+      - Name: EventArguments
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Type: PropertyType
+          DataType: ByteString
+          Value: ""
+        - Name: EventType
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: SourceNode
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: SourceName
+          Type: PropertyType
+          DataType: String
+          Value: ""
+        - Name: Time
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: ReceiveTime
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: Message
+          Type: PropertyType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: Severity
+          Type: PropertyType
+          DataType: UInt16
+          Value: 0
+  - Name: Label6
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"CSV path"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 300.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 100.0
+  - Name: CSV_path
+    Type: TextBox
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "{NodeId:ns=7;g=cbb15745-fb26-2224-eb9b-701f110a79c3}"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 220.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 360.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 95.0
+  - Name: Button5
+    Type: Button
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Delete data"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 370.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 205.0
+    - Name: MouseClickEventHandler1
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"Id":16,"Namespace":3}
+      - Name: MethodsToCall
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"bf50cb53e937c7f7d6f4b703814dbe09","Namespace":7}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"Id":58}
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Query"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: Query
+              Type: BaseDataVariableType
+              DataType: String
+              Description: {"NamespaceIndex":17,"TextId":"QueryQueryDescription"}
+              Value: "DELETE FROM \"SigningEventLogger\""
+          - Name: OutputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: Header
+              Type: BaseDataVariableType
+              DataType: String
+              Description: {"NamespaceIndex":17,"TextId":"QueryHeaderDescription"}
+              ValueRank: OneDimension
+              ArrayDimensions: [0]
+              Value: []
+            - Name: ResultSet
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              Description: {"NamespaceIndex":17,"TextId":"QueryResultSetDescription"}
+              ValueRank: OneOrMoreDimensions
+              ArrayDimensions: [0,0]
+      - Name: EventArguments
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Type: PropertyType
+          DataType: ByteString
+          Value: ""
+        - Name: EventType
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: SourceNode
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: SourceName
+          Type: PropertyType
+          DataType: String
+          Value: ""
+        - Name: Time
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: ReceiveTime
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: Message
+          Type: PropertyType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: Severity
+          Type: PropertyType
+          DataType: UInt16
+          Value: 0
+  - Name: Sign_multiple_files_Button
+    Type: Button
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Sign multiple files"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 690.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 200.0
+    - Name: MouseClickEventHandler1
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"Id":16,"Namespace":3}
+      - Name: MethodsToCall
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"1ac7643abc3252197bfd3f2dcab1d704","Namespace":7}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"Id":58}
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "SignFile"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: filePath
+              Type: BaseDataVariableType
+              DataType: String
+              Value: ""
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{NodeId:ns=7;g=6826bdef-ce0d-7930-347e-95bf6f9ffb4b}"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+        - Name: MethodContainer2
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"1ac7643abc3252197bfd3f2dcab1d704","Namespace":7}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"Id":58}
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "SignFile"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: filePath
+              Type: BaseDataVariableType
+              DataType: String
+              Value: ""
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{NodeId:ns=7;g=98c40046-ad1d-027d-b0c0-8f336db30773}"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+        - Name: MethodContainer3
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"1ac7643abc3252197bfd3f2dcab1d704","Namespace":7}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"Id":58}
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "SignFile"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: filePath
+              Type: BaseDataVariableType
+              DataType: String
+              Value: ""
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{NodeId:ns=7;g=4207ddb7-10a5-6b39-5666-523395c5afc6}"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+      - Name: EventArguments
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Type: PropertyType
+          DataType: ByteString
+          Value: ""
+        - Name: EventType
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: SourceNode
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: SourceName
+          Type: PropertyType
+          DataType: String
+          Value: ""
+        - Name: Time
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: ReceiveTime
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: Message
+          Type: PropertyType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: Severity
+          Type: PropertyType
+          DataType: UInt16
+          Value: 0
+  - Name: Signed_file1_path
+    Type: TextBox
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "{NodeId:ns=7;g=6826bdef-ce0d-7930-347e-95bf6f9ffb4b}"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 190.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 690.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 90.0
+  - Name: Signed_file2_path
+    Type: TextBox
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "{NodeId:ns=7;g=98c40046-ad1d-027d-b0c0-8f336db30773}"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 190.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 690.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 125.0
+  - Name: Signed_file3_path
+    Type: TextBox
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "{NodeId:ns=7;g=4207ddb7-10a5-6b39-5666-523395c5afc6}"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 190.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 690.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 160.0
+  - Name: Label7
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Signed file1 path"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 600.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 95.0
+    - Name: Visible
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+  - Name: Label8
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Signed file2 path"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 600.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 130.0
+    - Name: Visible
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+  - Name: Label9
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Signed file3 path"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 598.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 165.0
+    - Name: Visible
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+  - Name: Label10
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Signature file1 path"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 900.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 90.0
+  - Name: Signature_file1_path
+    Type: TextBox
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "{NodeId:ns=7;g=5c07646c-59a6-5fed-f5e9-02a72e7a4344}"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 220.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1010.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 85.0
+  - Name: Label11
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Signature file2 path"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 900.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 115.0
+  - Name: Signature_file2_path
+    Type: TextBox
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "{NodeId:ns=7;g=b7b28353-6042-cc2d-c668-a42c98807944}"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 220.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1010.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 115.0
+  - Name: Label12
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Signature file3 path"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 900.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 145.0
+  - Name: Signature_file3_path
+    Type: TextBox
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "{NodeId:ns=7;g=01029382-e2de-9f54-798c-b21b539e860d}"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 220.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1010.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 145.0
+  - Name: Verify_multiple_files_button
+    Type: Button
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Verify multiple files"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 899.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 170.0
+    - Name: MouseClickEventHandler1
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"Id":16,"Namespace":3}
+      - Name: MethodsToCall
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"1ac7643abc3252197bfd3f2dcab1d704","Namespace":7}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"Id":58}
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "VerifyFileSignature"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: filePath
+              Type: BaseDataVariableType
+              DataType: String
+              Value: ""
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{NodeId:ns=7;g=6826bdef-ce0d-7930-347e-95bf6f9ffb4b}"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: signatureFilePath
+              Type: BaseDataVariableType
+              DataType: String
+              Value: ""
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{NodeId:ns=7;g=5c07646c-59a6-5fed-f5e9-02a72e7a4344}"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+          - Name: OutputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: verifyResult
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: false
+        - Name: MethodContainer3
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"1ac7643abc3252197bfd3f2dcab1d704","Namespace":7}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"Id":58}
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "VerifyFileSignature"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: filePath
+              Type: BaseDataVariableType
+              DataType: String
+              Value: ""
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{NodeId:ns=7;g=98c40046-ad1d-027d-b0c0-8f336db30773}"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: signatureFilePath
+              Type: BaseDataVariableType
+              DataType: String
+              Value: ""
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{NodeId:ns=7;g=b7b28353-6042-cc2d-c668-a42c98807944}"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+          - Name: OutputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: verifyResult
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: false
+        - Name: MethodContainer4
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"1ac7643abc3252197bfd3f2dcab1d704","Namespace":7}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"Id":58}
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "VerifyFileSignature"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: filePath
+              Type: BaseDataVariableType
+              DataType: String
+              Value: ""
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{NodeId:ns=7;g=4207ddb7-10a5-6b39-5666-523395c5afc6}"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: signatureFilePath
+              Type: BaseDataVariableType
+              DataType: String
+              Value: ""
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{NodeId:ns=7;g=01029382-e2de-9f54-798c-b21b539e860d}"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+          - Name: OutputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: verifyResult
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: false
+        - Name: MethodContainer2
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"Id":22,"Namespace":2}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"Id":58}
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Set"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: VariableToModify
+              Type: BaseDataVariableType
+              DataType: VariablePointer
+              Description: {"NamespaceIndex":2,"TextId":"SetVariableToModifyDescription"}
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../files_visible_label/Visible@NodeId"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Description: {"NamespaceIndex":2,"TextId":"SetValueDescription"}
+              Value: true
+            - Name: ArrayIndex
+              Type: BaseDataVariableType
+              DataType: UInt32
+              Description: {"NamespaceIndex":2,"TextId":"SetArrayIndexDescription"}
+              ValueRank: ScalarOrOneDimension
+              Value: 0
+      - Name: EventArguments
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Type: PropertyType
+          DataType: ByteString
+          Value: ""
+        - Name: EventType
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: SourceNode
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: SourceName
+          Type: PropertyType
+          DataType: String
+          Value: ""
+        - Name: Time
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: ReceiveTime
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: Message
+          Type: PropertyType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: Severity
+          Type: PropertyType
+          DataType: UInt16
+          Value: 0
+  - Name: files_visible_label
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: ConditionalConverter1
+        Type: ConditionalConverter
+        Children:
+        - Name: Condition
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ReferenceType: HasSource
+          Value: false
+          Children:
+          - Name: ExpressionEvaluator1
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Expression
+              Type: BaseDataVariableType
+              DataType: String
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "{0}&&{1}&&{2}"
+            - Name: ns=2;Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Verify_multiple_files_button/MouseClickEventHandler1/MethodsToCall/MethodContainer1/OutputArguments/verifyResult"
+            - Name: ns=2;Source1
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Verify_multiple_files_button/MouseClickEventHandler1/MethodsToCall/MethodContainer3/OutputArguments/verifyResult"
+            - Name: ns=2;Source2
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Verify_multiple_files_button/MouseClickEventHandler1/MethodsToCall/MethodContainer4/OutputArguments/verifyResult"
+        - Name: TrueValue
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"Signatures of all files are valid"}
+        - Name: FalseValue
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"Not all the signatures are valid, please check them one by one"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 900.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 215.0
+    - Name: Visible
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: false
+    - Name: TextColor
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#e43232"
+    - Name: VisibleTransitioned
+      Type: VariableTransitionEventDispatcher
+      Children:
+      - Name: Value
+        Type: BaseVariableType
+        DataType: Double
+        Value: 1.0
+      - Name: Transition
+        Type: BaseVariableType
+        DataType: VariableTransition
+        Value: 0
+      - Name: VariableNodePath
+        Type: BaseVariableType
+        DataType: NodePath
+        Value: "../Visible"
+      - Name: VariableTransitionEventHandler1
+        Type: EventHandler
+        Children:
+        - Name: ListenEventType
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"Id":108,"Namespace":2}
+        - Name: MethodsToCall
+          Type: BaseObjectType
+          Children:
+          - Name: MethodContainer1
+            Type: BaseObjectType
+            Children:
+            - Name: ns=2;ObjectPointer
+              Type: NodePointer
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+              Children:
+              - Name: Kind
+                Type: PropertyType
+                DataType: NodeId
+                Value: {"Id":58}
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../HideLabelNetLogic@NodeId"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: ns=2;Method
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Hide"
+        - Name: EventArguments
+          Type: VariableTransitionEvent
+          Children:
+          - Name: VariableNodeId
+            Type: BaseVariableType
+            DataType: NodeId
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
+          - Name: NewValue
+            Type: BaseVariableType
+            DataType: BaseDataType
+          - Name: OldValue
+            Type: BaseVariableType
+            DataType: BaseDataType
+          - Name: EventId
+            Type: PropertyType
+            DataType: ByteString
+            Value: ""
+          - Name: EventType
+            Type: PropertyType
+            DataType: NodeId
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
+          - Name: SourceNode
+            Type: PropertyType
+            DataType: NodeId
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
+          - Name: SourceName
+            Type: PropertyType
+            DataType: String
+            Value: ""
+          - Name: Time
+            Type: PropertyType
+            DataType: UtcTime
+            Value: "1601-01-01T00:00:00.0000000"
+          - Name: ReceiveTime
+            Type: PropertyType
+            DataType: UtcTime
+            Value: "1601-01-01T00:00:00.0000000"
+          - Name: Message
+            Type: PropertyType
+            DataType: LocalizedText
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          - Name: Severity
+            Type: PropertyType
+            DataType: UInt16
+            Value: 0
+    - Name: HideLabelNetLogic
+      Type: NetLogic
+      Children:
+      - Class: Method
+        Name: Hide
+- File: Screens/Screens.yaml
+- Name: WebPresentationEngine
+  Type: ns=26;PresentationEngine
+  Children:
+  - Name: Protocol
+    Type: BaseDataVariableType
+    DataType: Protocol
+    Value: 0
+  - Name: IPAddress
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0.0.0.0"
+  - Name: Port
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 0
+  - Name: StartWindow
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"b1f6c8b230e87572ef0281ef02947772","Namespace":7}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"Id":12,"Namespace":3}
+  - Name: StyleSheet
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"fa5d392bc6d5694ebf5c48aa9916dbb2","Namespace":7}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"Id":447,"Namespace":3}
+  - Name: StartingUser
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"Id":46,"Namespace":1}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"Id":14,"Namespace":1}
+  - Name: Sessions
+    Type: BaseObjectType
+    Children:
+    - Name: Session1
+      Type: UISession
+      Children:
+      - Name: IsInteractive
+        Type: BaseDataVariableType
+        DataType: Boolean
+        AccessLevel: Read
+        Value: true
+      - Name: IsNative
+        Type: BaseDataVariableType
+        DataType: Boolean
+        AccessLevel: Read
+        Value: false
+      - Name: IsWeb
+        Type: BaseDataVariableType
+        DataType: Boolean
+        AccessLevel: Read
+        Value: false
+      - Name: User
+        Type: NodePointer
+        DataType: NodeId
+        AccessLevel: Read
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+        Children:
+        - Name: Kind
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"Id":14,"Namespace":1}
+      - Name: ActualLocaleId
+        Type: BaseVariableType
+        DataType: LocaleId
+        ReferenceType: HasProperty
+        Value: ""
+      - Name: ActualLanguage
+        Type: BaseVariableType
+        DataType: LocaleId
+        ReferenceType: HasProperty
+        Value: ""
+      - Name: ActualMeasurementSystem
+        Type: BaseVariableType
+        DataType: MeasurementSystem
+        ReferenceType: HasProperty
+        Value: 0
+      - Name: TimeZoneOffset
+        Type: BaseVariableType
+        DataType: TimeZoneDataType
+        ReferenceType: HasProperty
+        AccessLevel: Read
+        Value: 
+         {
+          "TypeId": {
+           "Id": 8912
+          },
+          "Body": {
+           "offset": 0,
+           "daylightSavingInOffset": false
+          }
+         }
+      - Name: Groups
+        Type: BaseObjectType
+      - Name: Roles
+        Type: BaseObjectType
+      - Name: Rights
+        Type: BaseObjectType
+      - Class: Reference
+        Target: ns=1;i=146
+        Direction: Forward
+      - Class: Reference
+        Target: ns=1;i=266
+        Direction: Forward
+      - Class: Reference
+        Target: ns=1;i=269
+        Direction: Forward
+      - Class: Reference
+        Target: ns=1;i=272
+        Direction: Forward
+      - Name: LoggedIn
+        Type: BaseVariableType
+        DataType: Boolean
+        AccessLevel: Read
+        Value: false
+- File: SigningWorkflows1/SigningWorkflows1.yaml
