@@ -75,3 +75,8 @@ Children:
   Type: BaseDataVariableType
   DataType: ResourceUri
   Value: "0"
+- Name: Hide_or_open_dialog_var
+  Id: g=5ce9289a724f4b6b375bae32587054fd
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: true

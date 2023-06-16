@@ -9,8 +9,12 @@ Children:
   Value: 
    {
     "Type": 12,
-    "Dimensions": [1,2],
+    "Dimensions": [5,2],
     "Body": [
-     "","en-US"
+     "","en-US",
+     "ProjectFolder","Project folder",
+     "ApplicationFolder","Application folder",
+     "Filename","File name",
+     "Size","Size"
     ]
    }
